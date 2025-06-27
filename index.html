@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>My Travel Map</title>
+    <style>
+        #map {
+            height: 100%;
+        }
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="info-panel">
+        <h1>My Travel Scores</h1>
+        <p>合計スコア：<span id="total-score">0</span></p>
+        <p>訪問済み地点数：<span id="point-count">0</span></p>
+        <p>訪問済みメッシュ数：<span id="mesh-count">0</span></p>
+        <hr>
+        <div>
+            <input type="checkbox" id="toggle-pins" checked>
+            <label for="toggle-pins">ピンを表示する</label>
+        </div>
+        <p><em>地図をクリックして訪問地点を追加！</em></p>
+    </div>
+
+    <div id="map"></div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+
+    <script src="script.js"></script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEKpD9C26IDgFLjDoqEfcNuDjekOfRTUA&callback=initMap"></script>
+</body>
+</html>
